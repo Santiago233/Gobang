@@ -103,10 +103,10 @@ void Reversi::oneRound()
         case 0:
             while (STEP < 10000) {
                 
-				pair<pair<int, int>, pair<int, int>> chess = step();                        // take action, send message
+				pair<int, int> chess = step();                        // take action, send message
                 
                 // lazi only excute after server's message confirm  in observe function
-                generateOneStepMessage(chess.first.first, chess.first.second, chess.second.first, chess.second.second);
+                generateOneStepMessage(chess.first, chess.second);
                 
                 
                 if (observe() >= 1) break;     // receive RET Code
@@ -122,9 +122,9 @@ void Reversi::oneRound()
                 
                 if (observe() >= 1) break;    // see black move
                 
-				pair<pair<int, int>, pair<int, int>> chess = step();                        // take action, send message
+				pair<int, int> chess = step();                        // take action, send message
                 // lazi only excute after server's message confirm  in observe function
-                generateOneStepMessage(chess.first.first,chess.first.second,chess.second.first, chess.second.second);
+                generateOneStepMessage(chess.first,chess.second);
                 
                 
                 if (observe() >= 1) break;     // receive RET Code
@@ -161,15 +161,13 @@ int Reversi::observe()
 			switch (client_socket.getRecvMsg()[2]) {
 			case 'P':   // update chessboard
 			{
-				int desRow1 = (client_socket.getRecvMsg()[3] - '0') * 10 + client_socket.getRecvMsg()[4] - '0';
-				int desCol1 = (client_socket.getRecvMsg()[5] - '0') * 10 + client_socket.getRecvMsg()[6] - '0';
-				int desRow2 = (client_socket.getRecvMsg()[7] - '0') * 10 + client_socket.getRecvMsg()[8] - '0';
-				int desCol2 = (client_socket.getRecvMsg()[9] - '0') * 10 + client_socket.getRecvMsg()[10] - '0';
-				int color = (client_socket.getRecvMsg()[11] - '0');
+				int desRow = (client_socket.getRecvMsg()[3] - '0') * 10 + client_socket.getRecvMsg()[4] - '0';
+				int desCol = (client_socket.getRecvMsg()[5] - '0') * 10 + client_socket.getRecvMsg()[6] - '0';
+				int color = (client_socket.getRecvMsg()[7] - '0');
 				//你应该在这里处理desRow和desCol，推荐使用函数
-				handleMessage(desRow1, desCol1, desRow2, desCol2, color);
+				handleMessage(desRow, desCol, color);
 
-				printf("a valid step of : (%d %d) (%d %d)\n", desRow1, desCol1, desRow2, desCol2);
+				printf("a valid step of : (%d %d)\n", desRow, desCol);
 				break;
 			}
 			case 'N':   // R0N: enemy wrong step
@@ -185,14 +183,12 @@ int Reversi::observe()
 			// invalid step
 			switch (client_socket.getRecvMsg()[2]) {
 			case 'P': {
-				int desRow1 = (client_socket.getRecvMsg()[3] - '0') * 10 + client_socket.getRecvMsg()[4] - '0';
-				int desCol1 = (client_socket.getRecvMsg()[5] - '0') * 10 + client_socket.getRecvMsg()[6] - '0';
-				int desRow2 = (client_socket.getRecvMsg()[7] - '0') * 10 + client_socket.getRecvMsg()[8] - '0';
-				int desCol2 = (client_socket.getRecvMsg()[9] - '0') * 10 + client_socket.getRecvMsg()[10] - '0';
-				int color = (client_socket.getRecvMsg()[11] - '0');
-				printf("Invalid step , server random a true step of : (%d %d) (%d %d)\n", desRow1, desCol1, desRow2, desCol2);
+				int desRow = (client_socket.getRecvMsg()[3] - '0') * 10 + client_socket.getRecvMsg()[4] - '0';
+				int desCol = (client_socket.getRecvMsg()[5] - '0') * 10 + client_socket.getRecvMsg()[6] - '0';
+				int color = (client_socket.getRecvMsg()[7] - '0');
+				printf("Invalid step , server random a true step of : (%d %d)\n", desRow, desCol);
 				//你应该在这里处理desRow和desCol，推荐使用函数
-				handleMessage(desRow1, desCol1, desRow2, desCol2, color);
+				handleMessage(desRow, desCol, color);
 				break;
 			}
 			case 'N': {
@@ -247,7 +243,7 @@ int Reversi::observe()
 	return rtn;
 }
 
-void Reversi::generateOneStepMessage(int row1, int col1, int row2, int col2)
+void Reversi::generateOneStepMessage(int row, int col)
 {
 	char msg[BUFSIZE];
 	memset(msg, 0, sizeof(msg));
@@ -255,18 +251,14 @@ void Reversi::generateOneStepMessage(int row1, int col1, int row2, int col2)
 	//put row and col in the message
 	msg[0] = 'S';
 	msg[1] = 'P';
-	msg[2] = '0' + row1 / 10;
-	msg[3] = '0' + row1 % 10;
-	msg[4] = '0' + col1 / 10;
-	msg[5] = '0' + col1 % 10;
-	msg[6] = '0' + row2 / 10;
-	msg[7] = '0' + row2 % 10;
-	msg[8] = '0' + col2 / 10;
-	msg[9] = '0' + col2 % 10;
-	msg[10] = '\0';
+	msg[2] = '0' + row / 10;
+	msg[3] = '0' + row % 10;
+	msg[4] = '0' + col / 10;
+	msg[5] = '0' + col % 10;
+	msg[6] = '\0';
 
 	//print
-	printf("generate one step at possition (%2d,%2d,%2d,%2d) : %s\n", row1, col1, row2, col2, msg);
+	printf("generate one step at possition (%2d,%2d) : %s\n", row, col, msg);
 
 
 	client_socket.sendMsg(msg);
@@ -278,16 +270,13 @@ void Reversi::generateOneStepMessage(int row1, int col1, int row2, int col2)
 * handleMessage: handle the message from server.
 */
 
-pair<pair<int, int>, pair<int, int>> Reversi::step()
+pair<int, int> Reversi::step()
 {
 	//TODO:Generate a valid step here
-	int r1 = rand() % 19;
-	int c1 = rand() % 19;
-	int r2 = rand() % 19;
-	int c2 = rand() % 19;
-	pair<int, int> step1 = make_pair(r1, c1);
-	pair<int, int> step2 = make_pair(r2, c2);
-	return make_pair(step1, step2);
+	int r = rand() % 19;
+	int c = rand() % 19;
+	
+	return make_pair(r, c);
 
 
 }
@@ -299,6 +288,6 @@ void Reversi::saveChessBoard()
     
 }
 
-void Reversi::handleMessage(int row1, int col1, int row2, int col2, int color) {
+void Reversi::handleMessage(int row, int col, int color) {
 
 }

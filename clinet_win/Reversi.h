@@ -15,14 +15,14 @@ private:
 	//function 
 
 	 // according to chessman position (row , col) , generate one step message in order to send to server
-    void generateOneStepMessage(int row1 , int col1, int row2, int col2);
+    void generateOneStepMessage(int row, int col);
 
 public:
-	pair<pair<int, int>, pair<int, int>> step();
+	pair<int, int> step();
     
     void saveChessBoard();
 
-	void handleMessage(int row1, int col1, int row2, int col2, int color);
+	void handleMessage(int row, int col, int color);
 public:
     Reversi();
     ~Reversi();
