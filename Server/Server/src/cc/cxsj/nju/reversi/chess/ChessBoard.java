@@ -277,7 +277,7 @@ public class ChessBoard {
 		}
 		
 		// System.out.println("blackCount:"+blackCount);
-        if(blackCount>=6) return true;
+        if(blackCount>=5) return true;
 		
 		//////////////
         int whiteCount=0;
@@ -385,7 +385,7 @@ public class ChessBoard {
 			}
 		}
 		// System.out.println("whiteCount:"+whiteCount);
-		if(whiteCount>=6) return true;
+		if(whiteCount>=5) return true;
 		// System.out.println("go on");
 		return false;
 	}
@@ -619,12 +619,12 @@ public class ChessBoard {
 				}
 			}
 			
-			if(blackCount>=6&&whiteCount<6){
+			if(blackCount>=5&&whiteCount<5){
 				MainFrame.instance().log("This round BLACK CHESSMAN more than WHITE CHESSMAN");
 				System.out.println("This round BLACK CHESSMAN more than WHITE CHESSMAN");
 
 			}
-			else if(blackCount<6&&whiteCount>=6){
+			else if(blackCount<5&&whiteCount>=5){
 				MainFrame.instance().log("This round WHITE CHESSMAN more than BLACK CHESSMAN");
 				System.out.println("This round WHITE CHESSMAN more than BLACK CHESSMAN");
 
@@ -634,8 +634,8 @@ public class ChessBoard {
 				System.out.println("This round BLACK AND WHITE CHESSMAN EQUAL");
 
 			}
-			if(blackCount>=6&&whiteCount<6) return 1;
-			else if(blackCount<6&&whiteCount>=6) return -1;
+			if(blackCount>=5&&whiteCount<5) return 1;
+			else if(blackCount<5&&whiteCount>=5) return -1;
 			else return 0;
 		}
 		return -100;
