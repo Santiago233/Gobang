@@ -1,6 +1,7 @@
 #ifndef Reversi_h
 #define Reversi_h
 #include <stdio.h>
+#include <ctime>
 #include "ClientSocket.h"
 
 
