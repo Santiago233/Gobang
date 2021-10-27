@@ -70,37 +70,27 @@ public class ChessBoard {
 				+ " with message: " + step);
 
 		// pos lazi of client
-		int desRow1 = -1, desCol1 = -1;
+		int desRow = -1, desCol = -1;
 		if (((step.charAt(2) == '0' || step.charAt(2) == '1') && step.charAt(3) >= '0' && step.charAt(3) <= '9')
 				&& ((step.charAt(4) == '0' || step.charAt(4) == '1') && step.charAt(5) >= '0'
 						&& step.charAt(5) <= '9')) {
-			desRow1 = Integer.valueOf(step.substring(2, 4));
-			desCol1 = Integer.valueOf(step.substring(4, 6));
-		}
-		int desRow2 = -1, desCol2 = -1;
-		if (((step.charAt(6) == '0' || step.charAt(6) == '1') && step.charAt(7) >= '0' && step.charAt(7) <= '9')
-				&& ((step.charAt(8) == '0' || step.charAt(8) == '1') && step.charAt(9) >= '0'
-						&& step.charAt(9) <= '9')) {
-			desRow2 = Integer.valueOf(step.substring(6, 8));
-			desCol2 = Integer.valueOf(step.substring(8, 10));
+			desRow = Integer.valueOf(step.substring(2, 4));
+			desCol = Integer.valueOf(step.substring(4, 6));
 		}
 
 		boolean canLazi = existLazi(color);
 		// 客户端判断无棋可下
-		if (desRow1 < 0 || desCol1 < 0 || desRow2 < 0 || desCol2 < 0) {
+		if (desRow < 0 || desCol < 0) {
 			System.out.println("Client say it cant lazi");
 			if (canLazi == false) {
 				MainFrame.instance().updateStepInfo((color == 0 ? "Black " : "White ") + "SYNoStep", stepNum);
 				return "RYN" + String.valueOf(color); // 客户端对于无法下棋判断正确
 			} else {
 				// 客户端实际有棋可以下，系统随机找一个可以下棋的位置
-				String lazimsg = randomStep2(color);
-				int randomRow1 = Integer.valueOf(lazimsg.substring(2, 4));
-				int randomCol1 = Integer.valueOf(lazimsg.substring(4, 6));
-				step(randomRow1, randomCol1, color); // 下棋
-				int randomRow2 = Integer.valueOf(lazimsg.substring(6, 8));
-				int randomCol2 = Integer.valueOf(lazimsg.substring(8, 10));
-				step(randomRow2, randomCol2, color); // 下棋
+				String lazimsg = randomStep(color);
+				int randomRow = Integer.valueOf(lazimsg.substring(2, 4));
+				int randomCol = Integer.valueOf(lazimsg.substring(4, 6));
+				step(randomRow, randomCol, color); // 下棋
 				MainFrame.instance()
 						.updateStepInfo((color == 0 ? "Black " : "White ") + "SW" + lazimsg.substring(2, 10), stepNum);
 				updateUIChessboard();
@@ -114,12 +104,12 @@ public class ChessBoard {
 			} else {
 				boolean RWP = false;
 				String RWPstr = "";
-				if ((desRow1 >= ROWS || desRow1 < 0) || (desCol1 >= COLS || desCol1 < 0)
-						|| step(desRow1, desCol1, color) == false) {
+				if ((desRow >= ROWS || desRow < 0) || (desCol >= COLS || desCol < 0)
+						|| step(desRow, desCol, color) == false) {
 					// System.out.println("Wrong place 1 " + desRow1 + " " + desCol2);
 					// 客户端判断的下棋位置不能落子 或者下棋的位置不属于棋盘所在位置
 					RWP = true;
-					String lazimsg = randomStep1(color);
+					String lazimsg = randomStep(color);
 					int randomRow = Integer.valueOf(lazimsg.substring(2, 4));
 					int randomCol = Integer.valueOf(lazimsg.substring(4, 6));
 					step(randomRow, randomCol, color); // 下棋
@@ -128,20 +118,6 @@ public class ChessBoard {
 				} else {
 					RWPstr += step.substring(2, 6);
 				}
-				if ((desRow2 >= ROWS || desRow2 < 0) || (desCol2 >= COLS || desCol2 < 0)
-						|| step(desRow2, desCol2, color) == false) {
-					// 客户端判断的下棋位置不能落子 或者下棋的位置不属于棋盘所在位置
-					// System.out.println("Wrong place 2 " + desRow2 + " " + desCol2);
-					RWP = true;
-					String lazimsg = randomStep1(color);
-					int randomRow = Integer.valueOf(lazimsg.substring(2, 4));
-					int randomCol = Integer.valueOf(lazimsg.substring(4, 6));
-					step(randomRow, randomCol, color); // 下棋
-					RWPstr += lazimsg.substring(2, 6);
-					// System.out.println("Wrong place 2 " + RWPstr);
-				} else {
-					RWPstr += step.substring(6, 10);
-				}
 				if (RWP) {
 					MainFrame.instance().updateStepInfo((color == 0 ? "Black " : "White ") + "SW" + RWPstr, stepNum);
 					updateUIChessboard();
@@ -149,10 +125,10 @@ public class ChessBoard {
 				} else {
 					// 客户端判断的下棋位置可以合法落子
 					MainFrame.instance()
-							.updateStepInfo((color == 0 ? "Black " : "White ") + "SY" + step.substring(2, 10), stepNum);
+							.updateStepInfo((color == 0 ? "Black " : "White ") + "SY" + step.substring(2, 6), stepNum);
 					updateUIChessboard();
 
-					return "RYP" + step.substring(2, 10) + String.valueOf(color);
+					return "RYP" + step.substring(2, 6) + String.valueOf(color);
 				}
 			}
 		}
@@ -663,40 +639,22 @@ public class ChessBoard {
 	/*
 	随机下下一步可以下的棋，返回行和列 如row = 2 , col = 3 , 返回 "0203"
 	 */
-	public String randomStep2(int color){
-		List<String> list = new ArrayList<>();
-		for(int r=0 ; r<ROWS ; r++){
-			for (int c=0 ; c<COLS ; c++){
-				if(board[r][c].color==-1) list.add(int2String(r) + int2String(c));
-			}
-		}
-		if(list.size() < 2){
-			return "SN";
-		}
-		
-		Random ran = new Random(System.currentTimeMillis());
-		int step1=ran.nextInt(list.size());
-		int step2=ran.nextInt(list.size());
-		while(step2==step1) step2=ran.nextInt(list.size());
-		
-		return "SP"+list.get(step1)+list.get(step2);
-	}
 	
-	public String randomStep1(int color){
+	public String randomStep(int color){
 		List<String> list = new ArrayList<>();
 		for(int r=0 ; r<ROWS ; r++){
 			for (int c=0 ; c<COLS ; c++){
 				if(board[r][c].color==-1) list.add(int2String(r) + int2String(c));
 			}
 		}
-		if(list.size() < 1){
+		if(list.size() == 0){
 			return "SN";
 		}
 		
 		Random ran = new Random(System.currentTimeMillis());
-		int step1=ran.nextInt(list.size());
+		int step=ran.nextInt(list.size());
 		
-		return "SP"+list.get(step1);
+		return "SP"+list.get(step);
 	}
 	
 	// 将整数转化为2位数字符串
