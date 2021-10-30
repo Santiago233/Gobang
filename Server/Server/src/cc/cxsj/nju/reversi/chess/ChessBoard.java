@@ -92,9 +92,9 @@ public class ChessBoard {
 				int randomCol = Integer.valueOf(lazimsg.substring(4, 6));
 				step(randomRow, randomCol, color); // 下棋
 				MainFrame.instance()
-						.updateStepInfo((color == 0 ? "Black " : "White ") + "SW" + lazimsg.substring(2, 10), stepNum);
+						.updateStepInfo((color == 0 ? "Black " : "White ") + "SW" + lazimsg.substring(2, 6), stepNum);
 				updateUIChessboard();
-				return "RWP" + lazimsg.substring(2, 10) + String.valueOf(color);
+				return "RWP" + lazimsg.substring(2, 6) + String.valueOf(color);
 			}
 		} else {
 			// 客户端判断有棋可下
