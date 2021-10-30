@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gobang">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Gobang.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

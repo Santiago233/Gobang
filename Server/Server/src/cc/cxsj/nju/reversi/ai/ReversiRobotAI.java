@@ -26,23 +26,19 @@ public abstract class ReversiRobotAI {
 		String step = "SP";
 		step += String.format("%02d", row1);
 		step += String.format("%02d", col1);
-		step += String.format("%02d", row2);
-		step += String.format("%02d", col2);
 		thisStep = step;
 	}
 	
 	protected void noStep() {
-		thisStep = "SP-1-1-1-1";
+		thisStep = "SP-1-1";
 	}
 	
 	protected void updateLastStep(String step) {   // P08070
 		
     	System.out.println(step);
         int desRow1 = Integer.valueOf(step.substring(0, 2)), desCol1 = Integer.valueOf(step.substring(2, 4));
-        int desRow2 = Integer.valueOf(step.substring(4, 6)), desCol2 = Integer.valueOf(step.substring(6, 8));
-        int color = step.charAt(8) - '0';
+        int color = step.charAt(4) - '0';
         chessboard.lazi(desRow1, desCol1, color);
-        chessboard.lazi(desRow2, desCol2, color);
         //chessboard.printChessBoard();
                
 	}

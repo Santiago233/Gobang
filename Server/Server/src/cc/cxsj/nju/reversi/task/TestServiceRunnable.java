@@ -190,19 +190,19 @@ public class TestServiceRunnable implements Runnable{
                         if (blackReturnCode.charAt(1) == 'Y') {
                             // valid step
                             if(blackReturnCode.charAt(2) != 'N')
-                                record.get(round).add("BLACK: VALID_STEP " + blackStep.substring(2, 10));
+                                record.get(round).add("BLACK: VALID_STEP " + blackStep.substring(2, 6));
                             else
-                                record.get(round).add("BLACK: VALID_STEP " + "-1-1-1-1");
+                                record.get(round).add("BLACK: VALID_STEP " + "-1-1");
                         }
                         else{
                             // invalid step
                             result.invalidSteps[black][round] ++;
                             if(blackReturnCode.charAt(2) != 'N')
-                                record.get(round).add("BLACK: INVALID_STEP " + blackStep.substring(2, 10)
-                                    + " REAL_STEP " + blackReturnCode.substring(3,11));
+                                record.get(round).add("BLACK: INVALID_STEP " + blackStep.substring(2, 6)
+                                    + " REAL_STEP " + blackReturnCode.substring(3,7));
                             else
-                                record.get(round).add("BLACK: INVALID_STEP " + blackStep.substring(2, 10)
-                                        + " REAL_STEP " + "-1-1-1-1");
+                                record.get(round).add("BLACK: INVALID_STEP " + blackStep.substring(2, 6)
+                                        + " REAL_STEP " + "-1-1");
                         }
                         record.get(round).add(board.toStringToDisplay());
                         if(sendMsg(black , round , blackReturnCode) == false)

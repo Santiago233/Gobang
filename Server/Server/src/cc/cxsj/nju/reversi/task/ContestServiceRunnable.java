@@ -343,6 +343,7 @@ public class ContestServiceRunnable implements Runnable{
                     // notify players that this round is over and record this round result
                     try {
                         System.out.println("Send E1");
+                        System.out.println("test");
                         players[0].send("E1");
                         players[1].send("E1");
                     } catch (Exception e) {

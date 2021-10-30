@@ -1,10 +1,174 @@
-2021-05-20 00:37:15  INFO TestServiceRunnable:60 - 111111111vsRobotD-test-0 begin!
-2021-05-20 00:37:15  INFO TestServiceRunnable:70 - 111111111vsRobotD-test-0 round 0 start
-2021-05-20 00:37:19  INFO TestServiceRunnable:287 - 111111111vsRobotD-test-0 round 0 end
-2021-05-20 00:37:19  INFO TestServiceRunnable:70 - 111111111vsRobotD-test-0 round 1 start
-2021-05-20 00:37:22  INFO TestServiceRunnable:287 - 111111111vsRobotD-test-0 round 1 end
-2021-05-20 00:37:22  INFO TestServiceRunnable:70 - 111111111vsRobotD-test-0 round 2 start
-2021-05-20 00:37:24  INFO TestServiceRunnable:287 - 111111111vsRobotD-test-0 round 2 end
-2021-05-20 00:37:24  INFO TestServiceRunnable:327 - 111111111vsRobotD-test-0 game over
-2021-05-20 00:37:24  INFO TestServiceRunnable:334 - 111111111vsRobotD-test-0 result save done!
-2021-05-20 00:37:24  INFO TestServiceRunnable:339 - 111111111vsRobotD-test-0 record save done!
+2021-10-30 14:33:27  INFO TestServiceRunnable:60 - 111111112vsRobotD-test-0 begin!
+2021-10-30 14:33:27  INFO TestServiceRunnable:70 - 111111112vsRobotD-test-0 round 0 start
+2021-10-30 14:33:29 ERROR TestServiceRunnable:144 - java.net.SocketTimeoutException: Read timed out
+2021-10-30 14:33:29 ERROR TestServiceRunnable:145 - 111111112vsRobotD-test-0 ROUND 0 TimeoutException when synchronize black round
+2021-10-30 14:33:29  INFO TestServiceRunnable:287 - 111111112vsRobotD-test-0 round 0 end
+2021-10-30 14:33:29  INFO TestServiceRunnable:327 - 111111112vsRobotD-test-0 game over
+2021-10-30 14:33:29  INFO TestServiceRunnable:334 - 111111112vsRobotD-test-0 result save done!
+2021-10-30 14:33:29  INFO TestServiceRunnable:339 - 111111112vsRobotD-test-0 record save done!
+2021-10-30 14:51:45  INFO TestServiceRunnable:60 - 111111112vsRobotD-test-0 begin!
+2021-10-30 14:51:45  INFO TestServiceRunnable:70 - 111111112vsRobotD-test-0 round 0 start
+2021-10-30 14:51:45 ERROR TestServiceRunnable:474 - java.lang.StringIndexOutOfBoundsException: begin 4, end 6, length 5
+2021-10-30 14:51:45  INFO TestServiceRunnable:287 - 111111112vsRobotD-test-0 round 0 end
+2021-10-30 14:51:45  INFO TestServiceRunnable:327 - 111111112vsRobotD-test-0 game over
+2021-10-30 14:51:45  INFO TestServiceRunnable:334 - 111111112vsRobotD-test-0 result save done!
+2021-10-30 14:51:45  INFO TestServiceRunnable:339 - 111111112vsRobotD-test-0 record save done!
+2021-10-30 15:04:31  INFO TestServiceRunnable:60 - 111111112vsRobotD-test-0 begin!
+2021-10-30 15:04:31  INFO TestServiceRunnable:70 - 111111112vsRobotD-test-0 round 0 start
+2021-10-30 15:04:31 ERROR TestServiceRunnable:474 - java.lang.StringIndexOutOfBoundsException: String index out of range: 6
+2021-10-30 15:04:31  INFO TestServiceRunnable:287 - 111111112vsRobotD-test-0 round 0 end
+2021-10-30 15:04:31  INFO TestServiceRunnable:327 - 111111112vsRobotD-test-0 game over
+2021-10-30 15:04:31  INFO TestServiceRunnable:334 - 111111112vsRobotD-test-0 result save done!
+2021-10-30 15:04:31  INFO TestServiceRunnable:339 - 111111112vsRobotD-test-0 record save done!
+2021-10-30 15:05:33  INFO TestServiceRunnable:60 - 111111112vsRobotD-test-0 begin!
+2021-10-30 15:05:33  INFO TestServiceRunnable:70 - 111111112vsRobotD-test-0 round 0 start
+2021-10-30 15:05:33 ERROR TestServiceRunnable:474 - java.lang.StringIndexOutOfBoundsException: String index out of range: 6
+2021-10-30 15:05:33  INFO TestServiceRunnable:287 - 111111112vsRobotD-test-0 round 0 end
+2021-10-30 15:05:34  INFO TestServiceRunnable:327 - 111111112vsRobotD-test-0 game over
+2021-10-30 15:05:34  INFO TestServiceRunnable:334 - 111111112vsRobotD-test-0 result save done!
+2021-10-30 15:05:34  INFO TestServiceRunnable:339 - 111111112vsRobotD-test-0 record save done!
+2021-10-30 15:06:05  INFO TestServiceRunnable:60 - 111111112vsRobotD-test-0 begin!
+2021-10-30 15:06:05  INFO TestServiceRunnable:70 - 111111112vsRobotD-test-0 round 0 start
+2021-10-30 15:06:05 ERROR TestServiceRunnable:474 - java.lang.StringIndexOutOfBoundsException: String index out of range: 6
+2021-10-30 15:06:05  INFO TestServiceRunnable:287 - 111111112vsRobotD-test-0 round 0 end
+2021-10-30 15:06:05  INFO TestServiceRunnable:327 - 111111112vsRobotD-test-0 game over
+2021-10-30 15:06:05  INFO TestServiceRunnable:334 - 111111112vsRobotD-test-0 result save done!
+2021-10-30 15:06:05  INFO TestServiceRunnable:339 - 111111112vsRobotD-test-0 record save done!
+2021-10-30 15:08:50  INFO TestServiceRunnable:60 - 111111112vsRobotD-test-0 begin!
+2021-10-30 15:08:50  INFO TestServiceRunnable:70 - 111111112vsRobotD-test-0 round 0 start
+2021-10-30 15:08:50 ERROR TestServiceRunnable:474 - java.lang.StringIndexOutOfBoundsException: String index out of range: 6
+2021-10-30 15:08:50  INFO TestServiceRunnable:287 - 111111112vsRobotD-test-0 round 0 end
+2021-10-30 15:08:50  INFO TestServiceRunnable:327 - 111111112vsRobotD-test-0 game over
+2021-10-30 15:08:50  INFO TestServiceRunnable:334 - 111111112vsRobotD-test-0 result save done!
+2021-10-30 15:08:50  INFO TestServiceRunnable:339 - 111111112vsRobotD-test-0 record save done!
+2021-10-30 15:11:02  INFO TestServiceRunnable:60 - 111111112vsRobotD-test-0 begin!
+2021-10-30 15:11:02  INFO TestServiceRunnable:70 - 111111112vsRobotD-test-0 round 0 start
+2021-10-30 15:11:02 ERROR TestServiceRunnable:474 - java.lang.StringIndexOutOfBoundsException: String index out of range: 6
+2021-10-30 15:11:02  INFO TestServiceRunnable:287 - 111111112vsRobotD-test-0 round 0 end
+2021-10-30 15:11:02  INFO TestServiceRunnable:327 - 111111112vsRobotD-test-0 game over
+2021-10-30 15:11:02  INFO TestServiceRunnable:334 - 111111112vsRobotD-test-0 result save done!
+2021-10-30 15:11:02  INFO TestServiceRunnable:339 - 111111112vsRobotD-test-0 record save done!
+2021-10-30 15:12:03  INFO TestServiceRunnable:60 - 111111112vsRobotD-test-0 begin!
+2021-10-30 15:12:03  INFO TestServiceRunnable:70 - 111111112vsRobotD-test-0 round 0 start
+2021-10-30 15:12:03 ERROR TestServiceRunnable:474 - java.lang.StringIndexOutOfBoundsException: String index out of range: 6
+2021-10-30 15:12:03  INFO TestServiceRunnable:287 - 111111112vsRobotD-test-0 round 0 end
+2021-10-30 15:12:03  INFO TestServiceRunnable:327 - 111111112vsRobotD-test-0 game over
+2021-10-30 15:12:03  INFO TestServiceRunnable:334 - 111111112vsRobotD-test-0 result save done!
+2021-10-30 15:12:03  INFO TestServiceRunnable:339 - 111111112vsRobotD-test-0 record save done!
+2021-10-30 15:13:58  INFO TestServiceRunnable:60 - 111111112vsRobotD-test-0 begin!
+2021-10-30 15:13:58  INFO TestServiceRunnable:70 - 111111112vsRobotD-test-0 round 0 start
+2021-10-30 15:13:58 ERROR TestServiceRunnable:475 - java.lang.StringIndexOutOfBoundsException: String index out of range: 6
+2021-10-30 15:13:58  INFO TestServiceRunnable:288 - 111111112vsRobotD-test-0 round 0 end
+2021-10-30 15:13:58  INFO TestServiceRunnable:328 - 111111112vsRobotD-test-0 game over
+2021-10-30 15:13:58  INFO TestServiceRunnable:335 - 111111112vsRobotD-test-0 result save done!
+2021-10-30 15:13:58  INFO TestServiceRunnable:340 - 111111112vsRobotD-test-0 record save done!
+2021-10-30 15:15:09  INFO TestServiceRunnable:60 - 111111112vsRobotD-test-0 begin!
+2021-10-30 15:15:23  INFO TestServiceRunnable:70 - 111111112vsRobotD-test-0 round 0 start
+2021-10-30 15:18:46 ERROR TestServiceRunnable:474 - java.lang.StringIndexOutOfBoundsException: String index out of range: 6
+2021-10-30 15:19:26  INFO TestServiceRunnable:287 - 111111112vsRobotD-test-0 round 0 end
+2021-10-30 15:19:26  INFO TestServiceRunnable:327 - 111111112vsRobotD-test-0 game over
+2021-10-30 15:19:26  INFO TestServiceRunnable:334 - 111111112vsRobotD-test-0 result save done!
+2021-10-30 15:19:26  INFO TestServiceRunnable:339 - 111111112vsRobotD-test-0 record save done!
+2021-10-30 15:20:24  INFO TestServiceRunnable:60 - 111111112vsRobotD-test-0 begin!
+2021-10-30 15:20:24  INFO TestServiceRunnable:70 - 111111112vsRobotD-test-0 round 0 start
+2021-10-30 15:20:24 ERROR TestServiceRunnable:474 - java.lang.StringIndexOutOfBoundsException: String index out of range: 6
+2021-10-30 15:20:24  INFO TestServiceRunnable:287 - 111111112vsRobotD-test-0 round 0 end
+2021-10-30 15:20:24  INFO TestServiceRunnable:327 - 111111112vsRobotD-test-0 game over
+2021-10-30 15:20:24  INFO TestServiceRunnable:334 - 111111112vsRobotD-test-0 result save done!
+2021-10-30 15:20:24  INFO TestServiceRunnable:339 - 111111112vsRobotD-test-0 record save done!
+2021-10-30 15:21:13  INFO TestServiceRunnable:60 - 111111112vsRobotD-test-0 begin!
+2021-10-30 15:21:13  INFO TestServiceRunnable:70 - 111111112vsRobotD-test-0 round 0 start
+2021-10-30 15:21:13 ERROR TestServiceRunnable:474 - java.lang.StringIndexOutOfBoundsException: String index out of range: 6
+2021-10-30 15:21:13  INFO TestServiceRunnable:287 - 111111112vsRobotD-test-0 round 0 end
+2021-10-30 15:21:13  INFO TestServiceRunnable:327 - 111111112vsRobotD-test-0 game over
+2021-10-30 15:21:13  INFO TestServiceRunnable:334 - 111111112vsRobotD-test-0 result save done!
+2021-10-30 15:21:13  INFO TestServiceRunnable:339 - 111111112vsRobotD-test-0 record save done!
+2021-10-30 15:21:51  INFO TestServiceRunnable:60 - 111111112vsRobotD-test-0 begin!
+2021-10-30 15:21:52  INFO TestServiceRunnable:70 - 111111112vsRobotD-test-0 round 0 start
+2021-10-30 15:24:39 ERROR TestServiceRunnable:474 - java.lang.StringIndexOutOfBoundsException: String index out of range: 6
+2021-10-30 15:25:13  INFO TestServiceRunnable:287 - 111111112vsRobotD-test-0 round 0 end
+2021-10-30 15:25:13  INFO TestServiceRunnable:327 - 111111112vsRobotD-test-0 game over
+2021-10-30 15:25:13  INFO TestServiceRunnable:334 - 111111112vsRobotD-test-0 result save done!
+2021-10-30 15:25:13  INFO TestServiceRunnable:339 - 111111112vsRobotD-test-0 record save done!
+2021-10-30 15:31:34  INFO TestServiceRunnable:60 - 111111112vsRobotD-test-0 begin!
+2021-10-30 15:31:34  INFO TestServiceRunnable:70 - 111111112vsRobotD-test-0 round 0 start
+2021-10-30 15:31:34 ERROR TestServiceRunnable:474 - java.lang.StringIndexOutOfBoundsException: String index out of range: 8
+2021-10-30 15:31:34  INFO TestServiceRunnable:287 - 111111112vsRobotD-test-0 round 0 end
+2021-10-30 15:31:34  INFO TestServiceRunnable:327 - 111111112vsRobotD-test-0 game over
+2021-10-30 15:31:34  INFO TestServiceRunnable:334 - 111111112vsRobotD-test-0 result save done!
+2021-10-30 15:31:34  INFO TestServiceRunnable:339 - 111111112vsRobotD-test-0 record save done!
+2021-10-30 15:32:06  INFO TestServiceRunnable:60 - 111111112vsRobotD-test-0 begin!
+2021-10-30 15:32:08  INFO TestServiceRunnable:70 - 111111112vsRobotD-test-0 round 0 start
+2021-10-30 15:34:15 ERROR TestServiceRunnable:474 - java.lang.StringIndexOutOfBoundsException: String index out of range: 8
+2021-10-30 15:35:50  INFO TestServiceRunnable:287 - 111111112vsRobotD-test-0 round 0 end
+2021-10-30 15:35:50  INFO TestServiceRunnable:327 - 111111112vsRobotD-test-0 game over
+2021-10-30 15:35:50  INFO TestServiceRunnable:334 - 111111112vsRobotD-test-0 result save done!
+2021-10-30 15:35:50  INFO TestServiceRunnable:339 - 111111112vsRobotD-test-0 record save done!
+2021-10-30 15:39:39  INFO TestServiceRunnable:60 - 111111112vsRobotD-test-0 begin!
+2021-10-30 15:39:39  INFO TestServiceRunnable:70 - 111111112vsRobotD-test-0 round 0 start
+2021-10-30 15:40:06 ERROR TestServiceRunnable:474 - java.lang.StringIndexOutOfBoundsException: String index out of range: 8
+2021-10-30 15:40:41  INFO TestServiceRunnable:287 - 111111112vsRobotD-test-0 round 0 end
+2021-10-30 15:40:41  INFO TestServiceRunnable:327 - 111111112vsRobotD-test-0 game over
+2021-10-30 15:40:41  INFO TestServiceRunnable:334 - 111111112vsRobotD-test-0 result save done!
+2021-10-30 15:40:41  INFO TestServiceRunnable:339 - 111111112vsRobotD-test-0 record save done!
+2021-10-30 15:40:58  INFO TestServiceRunnable:60 - 111111112vsRobotD-test-0 begin!
+2021-10-30 15:40:58  INFO TestServiceRunnable:70 - 111111112vsRobotD-test-0 round 0 start
+2021-10-30 15:43:10 ERROR TestServiceRunnable:474 - java.lang.StringIndexOutOfBoundsException: String index out of range: 8
+2021-10-30 15:43:10  INFO TestServiceRunnable:287 - 111111112vsRobotD-test-0 round 0 end
+2021-10-30 15:43:10  INFO TestServiceRunnable:327 - 111111112vsRobotD-test-0 game over
+2021-10-30 15:43:10  INFO TestServiceRunnable:334 - 111111112vsRobotD-test-0 result save done!
+2021-10-30 15:43:10  INFO TestServiceRunnable:339 - 111111112vsRobotD-test-0 record save done!
+2021-10-30 15:44:02  INFO TestServiceRunnable:60 - 111111112vsRobotD-test-0 begin!
+2021-10-30 15:44:02  INFO TestServiceRunnable:70 - 111111112vsRobotD-test-0 round 0 start
+2021-10-30 15:45:45  INFO TestServiceRunnable:60 - 111111112vsRobotD-test-0 begin!
+2021-10-30 15:45:45  INFO TestServiceRunnable:70 - 111111112vsRobotD-test-0 round 0 start
+2021-10-30 15:45:50  INFO TestServiceRunnable:287 - 111111112vsRobotD-test-0 round 0 end
+2021-10-30 15:45:50  INFO TestServiceRunnable:70 - 111111112vsRobotD-test-0 round 1 start
+2021-10-30 15:45:51 ERROR TestServiceRunnable:275 - java.lang.StringIndexOutOfBoundsException: String index out of range: 11
+2021-10-30 15:45:51 ERROR TestServiceRunnable:276 - 111111112vsRobotD-test-0 ROUND 1 Unkown Exception in 1 CONTEST
+2021-10-30 15:45:51  INFO TestServiceRunnable:287 - 111111112vsRobotD-test-0 round 1 end
+2021-10-30 15:45:51  INFO TestServiceRunnable:70 - 111111112vsRobotD-test-0 round 2 start
+2021-10-30 15:45:54  INFO TestServiceRunnable:287 - 111111112vsRobotD-test-0 round 2 end
+2021-10-30 15:45:54  INFO TestServiceRunnable:327 - 111111112vsRobotD-test-0 game over
+2021-10-30 15:45:54  INFO TestServiceRunnable:334 - 111111112vsRobotD-test-0 result save done!
+2021-10-30 15:45:54  INFO TestServiceRunnable:339 - 111111112vsRobotD-test-0 record save done!
+2021-10-30 15:49:08  INFO TestServiceRunnable:60 - 111111112vsRobotD-test-0 begin!
+2021-10-30 15:49:08  INFO TestServiceRunnable:70 - 111111112vsRobotD-test-0 round 0 start
+2021-10-30 15:49:12  INFO TestServiceRunnable:287 - 111111112vsRobotD-test-0 round 0 end
+2021-10-30 15:49:12  INFO TestServiceRunnable:70 - 111111112vsRobotD-test-0 round 1 start
+2021-10-30 15:49:14  INFO TestServiceRunnable:287 - 111111112vsRobotD-test-0 round 1 end
+2021-10-30 15:49:14  INFO TestServiceRunnable:70 - 111111112vsRobotD-test-0 round 2 start
+2021-10-30 15:49:17  INFO TestServiceRunnable:287 - 111111112vsRobotD-test-0 round 2 end
+2021-10-30 15:49:17  INFO TestServiceRunnable:327 - 111111112vsRobotD-test-0 game over
+2021-10-30 15:49:17  INFO TestServiceRunnable:334 - 111111112vsRobotD-test-0 result save done!
+2021-10-30 15:49:17  INFO TestServiceRunnable:339 - 111111112vsRobotD-test-0 record save done!
+2021-10-30 16:00:17  INFO TestServiceRunnable:60 - 111111112vsRobotD-test-0 begin!
+2021-10-30 16:00:17  INFO TestServiceRunnable:70 - 111111112vsRobotD-test-0 round 0 start
+2021-10-30 16:00:21  INFO TestServiceRunnable:287 - 111111112vsRobotD-test-0 round 0 end
+2021-10-30 16:00:21  INFO TestServiceRunnable:70 - 111111112vsRobotD-test-0 round 1 start
+2021-10-30 16:00:23  INFO TestServiceRunnable:287 - 111111112vsRobotD-test-0 round 1 end
+2021-10-30 16:00:23  INFO TestServiceRunnable:70 - 111111112vsRobotD-test-0 round 2 start
+2021-10-30 16:00:24  INFO TestServiceRunnable:287 - 111111112vsRobotD-test-0 round 2 end
+2021-10-30 16:00:24  INFO TestServiceRunnable:327 - 111111112vsRobotD-test-0 game over
+2021-10-30 16:00:24  INFO TestServiceRunnable:334 - 111111112vsRobotD-test-0 result save done!
+2021-10-30 16:00:24  INFO TestServiceRunnable:339 - 111111112vsRobotD-test-0 record save done!
+2021-10-30 16:01:31  INFO TestServiceRunnable:60 - 111111112vsRobotD-test-0 begin!
+2021-10-30 16:01:31  INFO TestServiceRunnable:70 - 111111112vsRobotD-test-0 round 0 start
+2021-10-30 16:01:35  INFO TestServiceRunnable:287 - 111111112vsRobotD-test-0 round 0 end
+2021-10-30 16:01:35  INFO TestServiceRunnable:70 - 111111112vsRobotD-test-0 round 1 start
+2021-10-30 16:01:37  INFO TestServiceRunnable:287 - 111111112vsRobotD-test-0 round 1 end
+2021-10-30 16:01:37  INFO TestServiceRunnable:70 - 111111112vsRobotD-test-0 round 2 start
+2021-10-30 16:01:39  INFO TestServiceRunnable:287 - 111111112vsRobotD-test-0 round 2 end
+2021-10-30 16:01:39  INFO TestServiceRunnable:327 - 111111112vsRobotD-test-0 game over
+2021-10-30 16:01:39  INFO TestServiceRunnable:334 - 111111112vsRobotD-test-0 result save done!
+2021-10-30 16:01:39  INFO TestServiceRunnable:339 - 111111112vsRobotD-test-0 record save done!
+2021-10-30 16:05:02  INFO TestServiceRunnable:60 - 111111112vsRobotD-test-0 begin!
+2021-10-30 16:05:02  INFO TestServiceRunnable:70 - 111111112vsRobotD-test-0 round 0 start
+2021-10-30 16:05:06  INFO TestServiceRunnable:287 - 111111112vsRobotD-test-0 round 0 end
+2021-10-30 16:05:06  INFO TestServiceRunnable:70 - 111111112vsRobotD-test-0 round 1 start
+2021-10-30 16:05:09  INFO TestServiceRunnable:287 - 111111112vsRobotD-test-0 round 1 end
+2021-10-30 16:05:09  INFO TestServiceRunnable:70 - 111111112vsRobotD-test-0 round 2 start
+2021-10-30 16:05:10  INFO TestServiceRunnable:287 - 111111112vsRobotD-test-0 round 2 end
+2021-10-30 16:05:10  INFO TestServiceRunnable:327 - 111111112vsRobotD-test-0 game over
+2021-10-30 16:05:10  INFO TestServiceRunnable:334 - 111111112vsRobotD-test-0 result save done!
+2021-10-30 16:05:10  INFO TestServiceRunnable:339 - 111111112vsRobotD-test-0 record save done!
