@@ -15,10 +15,6 @@ public class RobotAIFactory {
             	return new RobotB();
             case RobotC:
             	return new RobotC();
-            case RobotD:
-            	return new RobotD();
-            case RobotE:
-            	return new RobotE();
 			default:
 				LOG.info("Robot Factory can not produce this model Robot!");
 				System.exit(0);

@@ -22,10 +22,10 @@ public abstract class ReversiRobotAI {
 		chessboard.generateEmptyChessBoard();
 	}
 	
-	protected void putDown(int row1, int col1, int row2, int col2) {
+	protected void putDown(int row, int col) {
 		String step = "SP";
-		step += String.format("%02d", row1);
-		step += String.format("%02d", col1);
+		step += String.format("%02d", row);
+		step += String.format("%02d", col);
 		thisStep = step;
 	}
 	
@@ -36,9 +36,9 @@ public abstract class ReversiRobotAI {
 	protected void updateLastStep(String step) {   // P08070
 		
     	System.out.println(step);
-        int desRow1 = Integer.valueOf(step.substring(0, 2)), desCol1 = Integer.valueOf(step.substring(2, 4));
+        int desRow = Integer.valueOf(step.substring(0, 2)), desCol = Integer.valueOf(step.substring(2, 4));
         int color = step.charAt(4) - '0';
-        chessboard.lazi(desRow1, desCol1, color);
+        chessboard.lazi(desRow, desCol, color);
         //chessboard.printChessBoard();
                
 	}

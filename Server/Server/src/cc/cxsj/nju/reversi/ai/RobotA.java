@@ -52,17 +52,11 @@ public class RobotA extends ReversiRobotAI{
 			}
 		}
 		// System.out.println("Robot Travel PutDown Size"+rows.size());
-		int step1=rand.nextInt(rows.size());
-		int step2=rand.nextInt(rows.size());
-		while(step2==step1) step2=rand.nextInt(rows.size());
-		// System.out.println(""+step1+step2);
-		int r1=rows.get(step1);
-		int c1=cols.get(step1);
-		int r2=rows.get(step2);
-		int c2=cols.get(step2);
-        System.out.println("robot chess at: " + r1 + " - " + c1
-        + " and " + r2 + " - " + c2);
-		putDown(r1, c1, r2, c2);
+		int step=rand.nextInt(rows.size());
+		int r=rows.get(step);
+		int c=cols.get(step);
+        System.out.println("robot chess at: " + r + " - " + c);
+		putDown(r, c);
 		
         return true;
     }
